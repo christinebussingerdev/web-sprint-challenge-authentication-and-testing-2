@@ -17,8 +17,9 @@ function findById(id) {
 }
 
 function findBy(filter) {
-  return db('users')
-  .where(filter)
+	return db('users')
+		.select('id', 'username', 'password')
+		.where(filter).first()
 }
 
 async function createUser(newUser) {

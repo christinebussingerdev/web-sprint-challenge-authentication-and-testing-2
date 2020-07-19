@@ -1,7 +1,24 @@
+const jwt = require("jsonwebtoken")
 
 
-module.exports = (req, res, next) => {
+function auth() {
+  return async (req, res, next) => {
+    const authError = {err: 'invalid credentials'}
 
-  if (!req.cookie.token) {res.status(401).json({ you: 'shall not pass!' })}
-  
-};
+    try{
+      const token = req.cookies.token
+
+      if(!token) {return res.status(401).json(authError)}
+
+      jwt.verify(token, 'cake', (err, decoded) => {
+        if(err) {return res.status(401).json(authError)}
+
+        next()
+      })
+      
+    }
+    catch(err) {next(err)}
+  }
+}
+
+module.exports = auth
