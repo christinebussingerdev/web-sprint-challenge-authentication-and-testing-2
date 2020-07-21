@@ -13,13 +13,13 @@ function find() {
 
 function findById(id) {
   return db('users')
-  .where(id)
+  .where('id', id)
 }
 
-function findBy(filter) {
+function findBy(username) {
 	return db('users')
 		.select('id', 'username', 'password')
-		.where(filter).first()
+		.where('username', username).first()
 }
 
 async function createUser(newUser) {

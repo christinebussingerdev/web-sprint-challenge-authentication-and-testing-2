@@ -33,7 +33,7 @@ router.post('/login', async (req, res, next) => {
 
     console.log(username, password)
 
-    const user = await db.findBy({username})
+    const user = await db.findBy(username)
 
     if (!user) {return res.status(401).json(authError)}
 
