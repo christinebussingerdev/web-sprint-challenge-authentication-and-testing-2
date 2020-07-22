@@ -1,0 +1,36 @@
+{
+  "name": "web-sprint-challenge-authentication-and-testing-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christinebussingerdev/web-sprint-challenge-authentication-and-testing-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christinebussingerdev/web-sprint-challenge-authentication-and-testing-2/issues"
+  },
+  "homepage": "https://github.com/christinebussingerdev/web-sprint-challenge-authentication-and-testing-2#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "colorette": "^1.2.1",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jest": "^26.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.2",
+    "nodemon": "^2.0.4",
+    "sqlite3": "^5.0.0",
+    "supertest": "^4.0.2"
+  }
+}
